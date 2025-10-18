@@ -1,0 +1,72 @@
+---
+interface Props {
+  lang?: 'en' | 'pl';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const translations = {
+  en: {
+    built: 'Built with',
+    code: 'View source on',
+  },
+  pl: {
+    built: 'Zbudowane z',
+    code: 'Zobacz kod na',
+  }
+};
+
+const t = translations[lang];
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <p class="mb-8">
+          <span class="text-mono">&copy; {currentYear}</span>
+        </p>
+        <p class="mb-0">
+          {t.built} <strong>Astro</strong> + <strong>Brutalism</strong>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <nav>
+          <ul>
+            <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">[GitHub]</a></li>
+            <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">[LinkedIn]</a></li>
+            <li><a href="https://github.com/yourusername/brutalist-portfolio" target="_blank" rel="noopener">[{t.code} GitHub]</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  footer nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+</style>

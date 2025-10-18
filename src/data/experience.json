@@ -1,0 +1,76 @@
+{
+  "experience": [
+    {
+      "id": "senior-cv-engineer",
+      "title": {
+        "en": "Senior Computer Vision Engineer",
+        "pl": "Senior Computer Vision Engineer"
+      },
+      "company": "TechVision AI",
+      "period": "2022 - Present",
+      "description": {
+        "en": [
+          "Lead development of real-time object tracking system processing 100+ camera feeds",
+          "Reduced inference latency by 60% through model optimization and quantization",
+          "Mentored team of 5 junior engineers in CV/ML best practices",
+          "Deployed production ML pipelines serving 1M+ requests/day"
+        ],
+        "pl": [
+          "Prowadzenie rozwoju systemu śledzenia obiektów w czasie rzeczywistym przetwarzającego 100+ strumieni kamer",
+          "Redukcja latencji inferecji o 60% poprzez optymalizację i kwantyzację modeli",
+          "Mentoring zespołu 5 młodszych inżynierów w zakresie CV/ML best practices",
+          "Wdrożenie produkcyjnych pipeline'ów ML obsługujących 1M+ requestów/dzień"
+        ]
+      },
+      "tags": ["Python", "TensorFlow", "PyTorch", "CUDA", "Docker", "Kubernetes"]
+    },
+    {
+      "id": "cv-engineer",
+      "title": {
+        "en": "Computer Vision Engineer",
+        "pl": "Computer Vision Engineer"
+      },
+      "company": "Robotics Corp",
+      "period": "2020 - 2022",
+      "description": {
+        "en": [
+          "Developed perception stack for autonomous mobile robots",
+          "Implemented SLAM algorithms for indoor navigation",
+          "Built custom annotation tools for training data generation",
+          "Collaborated with hardware team on camera sensor selection"
+        ],
+        "pl": [
+          "Rozwój stosu percepcji dla autonomicznych robotów mobilnych",
+          "Implementacja algorytmów SLAM do nawigacji wewnętrznej",
+          "Budowa niestandardowych narzędzi do anotacji danych treningowych",
+          "Współpraca z zespołem hardware przy wyborze sensorów kamer"
+        ]
+      },
+      "tags": ["C++", "OpenCV", "ROS", "Point Cloud", "SLAM"]
+    },
+    {
+      "id": "software-engineer",
+      "title": {
+        "en": "Software Engineer",
+        "pl": "Software Engineer"
+      },
+      "company": "StartupXYZ",
+      "period": "2018 - 2020",
+      "description": {
+        "en": [
+          "Built full-stack web applications using React and Node.js",
+          "Designed and implemented RESTful APIs and GraphQL services",
+          "Maintained CI/CD pipelines and cloud infrastructure on AWS",
+          "Participated in agile development and code reviews"
+        ],
+        "pl": [
+          "Budowa aplikacji full-stack używając React i Node.js",
+          "Projektowanie i implementacja RESTful API i serwisów GraphQL",
+          "Utrzymanie CI/CD pipeline'ów i infrastruktury w chmurze AWS",
+          "Udział w agile development i code reviews"
+        ]
+      },
+      "tags": ["JavaScript", "React", "Node.js", "AWS", "PostgreSQL"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import '../styles/global.css';
+
+import projectsData from '../data/projects.json';
+
+const lang = 'en';
+const projects = projectsData.projects;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Your Name</title>
+  <meta name="description" content="Computer vision and software engineering projects">
+</head>
+<body>
+  <Header lang="en" />
+
+  <main class="container">
+    <section class="section">
+      <h1>Projects</h1>
+      <p>
+        Selected work in computer vision, machine learning, and software engineering.
+        All projects are open-source and available on GitHub.
+      </p>
+    </section>
+
+    <div class="grid">
+      {projects.map((project) => (
+        <ProjectCard
+          title={project.title[lang]}
+          description={project.description[lang]}
+          tags={project.tags}
+          github={project.github}
+          image={project.image}
+        />
+      ))}
+    </div>
+  </main>
+
+  <Footer lang="en" />
+</body>
+</html>

@@ -1,0 +1,75 @@
+---
+interface Props {
+  lang?: 'en' | 'pl';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const translations = {
+  en: {
+    home: 'Home',
+    projects: 'Projects',
+    experience: 'Experience',
+    contact: 'Contact',
+    theme: 'Theme',
+    cv: 'Download CV'
+  },
+  pl: {
+    home: 'Start',
+    projects: 'Projekty',
+    experience: 'Doświadczenie',
+    contact: 'Kontakt',
+    theme: 'Motyw',
+    cv: 'Pobierz CV'
+  }
+};
+
+const t = translations[lang];
+const basePath = lang === 'en' ? '' : `/${lang}`;
+---
+
+<header>
+  <div class="container">
+    <div class="controls">
+      <button id="theme-toggle">[{t.theme}]</button>
+      <div class="lang-switch">
+        <a href="/" class={lang === 'en' ? 'text-accent' : ''}>[EN]</a>
+        <span>/</span>
+        <a href="/pl" class={lang === 'pl' ? 'text-accent' : ''}>[PL]</a>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href={`${basePath}/`}>[{t.home}]</a></li>
+        <li><a href={`${basePath}/projects`}>[{t.projects}]</a></li>
+        <li><a href={`${basePath}/experience`}>[{t.experience}]</a></li>
+        <li><a href={`${basePath}/contact`}>[{t.contact}]</a></li>
+        <li><a href="/cv/cv.pdf" download>[{t.cv}]</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { initTheme, toggleTheme } from '../scripts/theme';
+
+  // Initialize theme on page load
+  initTheme();
+
+  // Add click handler for theme toggle
+  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+</script>
+
+<style>
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .lang-switch a {
+    border: none;
+    font-weight: bold;
+  }
+</style>
