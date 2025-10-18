@@ -1,67 +1,102 @@
 ---
 interface Props {
-  lang?: 'en' | 'pl';
+  lang?: "en" | "pl";
 }
 
-const { lang = 'en' } = Astro.props;
+const { lang = "en" } = Astro.props;
 
 const translations = {
   en: {
-    home: 'Home',
-    projects: 'Projects',
-    experience: 'Experience',
-    contact: 'Contact',
-    theme: 'Theme',
-    cv: 'Download CV'
+    home: "Home",
+    projects: "Projects",
+    experience: "Experience",
+    contact: "Contact",
+    theme: "Theme",
   },
   pl: {
-    home: 'Start',
-    projects: 'Projekty',
-    experience: 'Doświadczenie',
-    contact: 'Kontakt',
-    theme: 'Motyw',
-    cv: 'Pobierz CV'
-  }
+    home: "Start",
+    projects: "Projekty",
+    experience: "Doświadczenie",
+    contact: "Kontakt",
+    theme: "Motyw",
+  },
 };
 
 const t = translations[lang];
-const basePath = lang === 'en' ? '' : `/${lang}`;
+const basePath = lang === "en" ? "" : `/${lang}`;
+
+// Get current page path and determine the language-switched URL
+const currentPath = Astro.url.pathname;
+let enPath = "/";
+let plPath = "/pl";
+
+// Map current path to corresponding language versions
+if (currentPath === "/" || currentPath === "/pl" || currentPath === "/pl/") {
+  enPath = "/";
+  plPath = "/pl";
+} else if (currentPath.includes("/experience")) {
+  enPath = "/experience";
+  plPath = "/pl/experience";
+} else if (currentPath.includes("/projects")) {
+  enPath = "/projects";
+  plPath = "/pl/projects";
+} else if (currentPath.includes("/contact")) {
+  enPath = "/contact";
+  plPath = "/pl/contact";
+}
 ---
 
 <header>
   <div class="container">
-    <div class="controls">
-      <button id="theme-toggle">[{t.theme}]</button>
-      <div class="lang-switch">
-        <a href="/" class={lang === 'en' ? 'text-accent' : ''}>[EN]</a>
-        <span>/</span>
-        <a href="/pl" class={lang === 'pl' ? 'text-accent' : ''}>[PL]</a>
+    <div class="header-row">
+      <nav>
+        <ul>
+          <li><a href={`${basePath}/`}>[{t.home}]</a></li>
+          <li><a href={`${basePath}/experience`}>[{t.experience}]</a></li>
+          <li><a href={`${basePath}/projects`}>[{t.projects}]</a></li>
+          <li><a href={`${basePath}/contact`}>[{t.contact}]</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle">[{t.theme}]</button>
+        <div class="lang-switch">
+          <a href={enPath} class={lang === "en" ? "text-accent" : ""}>[EN]</a>
+          <span>/</span>
+          <a href={plPath} class={lang === "pl" ? "text-accent" : ""}>[PL]</a>
+        </div>
       </div>
     </div>
-
-    <nav>
-      <ul>
-        <li><a href={`${basePath}/`}>[{t.home}]</a></li>
-        <li><a href={`${basePath}/projects`}>[{t.projects}]</a></li>
-        <li><a href={`${basePath}/experience`}>[{t.experience}]</a></li>
-        <li><a href={`${basePath}/contact`}>[{t.contact}]</a></li>
-        <li><a href="/cv/cv.pdf" download>[{t.cv}]</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
 <script>
-  import { initTheme, toggleTheme } from '../scripts/theme';
+  import { initTheme, toggleTheme } from "../scripts/theme";
 
   // Initialize theme on page load
   initTheme();
 
   // Add click handler for theme toggle
-  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+  document
+    .getElementById("theme-toggle")
+    ?.addEventListener("click", toggleTheme);
 </script>
 
 <style>
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
   .lang-switch {
     display: flex;
     gap: 8px;
@@ -71,5 +106,17 @@ const basePath = lang === 'en' ? '' : `/${lang}`;
   .lang-switch a {
     border: none;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .header-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .controls {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 </style>

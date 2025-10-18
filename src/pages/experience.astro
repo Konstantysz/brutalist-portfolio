@@ -1,106 +1,206 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
-import experienceData from '../data/experience.json';
+import experienceData from "../data/experience.json";
 
-const lang = 'en';
+const lang = "en";
 const experiences = experienceData.experience;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience - Konstanty Szumigaj</title>
-  <meta name="description" content="Professional experience in computer vision and software engineering">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
-<body>
-  <Header lang="en" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience - Konstanty Szumigaj</title>
+    <meta
+      name="description"
+      content="Professional experience in computer vision and software engineering"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header lang="en" />
 
-  <main class="container">
-    <section class="section">
-      <h1>Experience</h1>
-      <p>
-        Professional journey in computer vision, machine learning, and software development.
-      </p>
-    </section>
+    <main class="container">
+      <section class="section">
+        <h1>Experience</h1>
+        <p>Work history, education, and publications.</p>
+      </section>
 
-    <section class="section">
-      <h2 class="section-title">Work History</h2>
+      <section class="section">
+        <h2 class="section-title">Work History</h2>
 
-      <div class="experience-timeline">
-        {experiences.map((exp) => (
+        <div class="experience-timeline">
+          {
+            experiences.map((exp) => (
+              <article class="experience-item">
+                <div class="experience-header">
+                  {exp.logo && (
+                    <div class="company-logo">
+                      <img src={exp.logo} alt={exp.company} />
+                    </div>
+                  )}
+                  <div class="experience-info">
+                    <h3>{exp.title[lang]}</h3>
+                    <div class="company-info">
+                      <strong>{exp.company}</strong>
+                    </div>
+                    <div class="period">{exp.period}</div>
+                  </div>
+                </div>
+
+                <ul>
+                  {exp.description[lang].map((item: string) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+
+                <div class="tags">
+                  {exp.tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="experience-timeline">
           <article class="experience-item">
-            <h3>{exp.title[lang]}</h3>
-            <div class="company-info">
-              <strong>{exp.company}</strong>
+            <div class="experience-header">
+              <div class="company-logo">
+                <img
+                  src="/images/education/pw.png"
+                  alt="Warsaw University of Technology"
+                />
+              </div>
+              <div class="experience-info">
+                <h3>Master of Science in Engineering - Mechatronics</h3>
+                <div class="company-info">
+                  <strong>Warsaw University of Technology</strong>
+                </div>
+                <div class="period">2021 - 2022</div>
+              </div>
             </div>
-            <div class="period">{exp.period}</div>
-
-            <ul>
-              {exp.description[lang].map((item: string) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-
-            <div class="tags">
-              {exp.tags.map((tag) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
+            <p class="mb-0">
+              <em>Thesis: [Add your master's thesis title]</em>
+            </p>
           </article>
-        ))}
-      </div>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">Skills & Technologies</h2>
+          <article class="experience-item">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img
+                  src="/images/education/pw.png"
+                  alt="Warsaw University of Technology"
+                />
+              </div>
+              <div class="experience-info">
+                <h3>Bachelor of Science in Engineering - Mechatronics</h3>
+                <div class="company-info">
+                  <strong>Warsaw University of Technology</strong>
+                </div>
+                <div class="period">2017 - 2021</div>
+              </div>
+            </div>
+            <p class="mb-0">
+              <em>Thesis: [Add your bachelor's thesis title]</em>
+            </p>
+          </article>
+        </div>
+      </section>
 
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Computer Vision</h3>
-          <p class="text-mono">
-            OpenCV · TensorFlow · PyTorch · ONNX · CUDA · Point Cloud Processing · SLAM · 3D Vision
+      <section class="section">
+        <h2 class="section-title">Publications</h2>
+        <div class="publication-item">
+          <p>
+            <strong
+              >DeepVID: deep-learning accelerated variational image
+              decomposition model tailored to fringe pattern filtration</strong
+            >
+          </p>
+          <p class="publication-authors">
+            Maria Cywińska, <strong>Konstanty Szumigaj</strong>, Michał
+            Kołodziej, Krzysztof Patorski, Vicente Mico, Shijie Feng, Chao Zuo
+            and Maciej Trusiak
+          </p>
+          <p class="publication-meta text-mono mb-0">
+            Journal of Optics, Vol. 25, No. 4 (2023) ·
+            <a
+              href="https://iopscience.iop.org/article/10.1088/2040-8986/acb3df"
+              target="_blank"
+              rel="noopener">[Article]</a
+            > ·
+            <a
+              href="https://iopscience.iop.org/article/10.1088/2040-8986/acb3df/pdf"
+              target="_blank"
+              rel="noopener">[PDF]</a
+            >
           </p>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>Programming</h3>
-          <p class="text-mono">
-            Python · C++ · Rust · JavaScript · TypeScript · Go
-          </p>
+      <section class="section">
+        <h2 class="section-title">Skills & Technologies</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Computer Vision</h3>
+            <p class="text-mono">
+              OpenCV · PyTorch · Structure from Motion · Gaussian Splatting ·
+              NeRF · 3D Scanning · Photogrammetry · LiDAR
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h3>Programming</h3>
+            <p class="text-mono">C++ · Python · CUDA · Git · CMake</p>
+          </div>
+
+          <div class="skill-category">
+            <h3>Algorithms & Math</h3>
+            <p class="text-mono">
+              Algorithms and Data Structures · Algebra and Geometry ·
+              Optimization Problems
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h3>DevOps & Methodologies</h3>
+            <p class="text-mono">
+              Docker · CI/CD · Scrum · Code Review · Linux · Windows
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>ML/AI</h3>
-          <p class="text-mono">
-            Object Detection · Segmentation · Tracking · Model Optimization · Edge Deployment
-          </p>
+      <section class="section">
+        <h2 class="section-title">Download CV</h2>
+        <div class="cv-downloads">
+          <a href="/cv/cv-en.pdf" download class="button">[Download PDF EN]</a>
+          <a href="/cv/cv-pl.pdf" download class="button">[Download PDF PL]</a>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>DevOps & Tools</h3>
-          <p class="text-mono">
-            Docker · Kubernetes · AWS · Git · CI/CD · Linux
-          </p>
-        </div>
-      </div>
-    </section>
+      <section class="section">
+        <p class="disclaimer">
+          <small
+            >Company logos are trademarks of their respective owners and are
+            used here solely to indicate employment history.</small
+          >
+        </p>
+      </section>
+    </main>
 
-    <section class="section">
-      <h2 class="section-title">Download CV</h2>
-      <p>
-        <a href="/cv/cv.pdf" download class="button">[Download PDF CV]</a>
-      </p>
-    </section>
-  </main>
-
-  <Footer lang="en" />
-</body>
+    <Footer lang="en" />
+  </body>
 </html>
 
 <style>
@@ -108,6 +208,36 @@ const experiences = experienceData.experience;
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+
+  .experience-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    padding: 4px;
+  }
+
+  .company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .experience-info {
+    flex: 1;
   }
 
   .company-info {
@@ -133,5 +263,31 @@ const experiences = experienceData.experience;
   .skill-category p {
     margin-bottom: 0;
     line-height: 1.6;
+  }
+
+  .publication-item {
+    border-left: 2px solid var(--border);
+    padding-left: 16px;
+  }
+
+  .publication-item p {
+    line-height: 1.4;
+  }
+
+  .publication-authors {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .publication-meta {
+    font-size: 14px;
+  }
+
+  .cv-downloads {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
   }
 </style>

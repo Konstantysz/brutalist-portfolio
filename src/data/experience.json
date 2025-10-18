@@ -1,76 +1,77 @@
 {
   "experience": [
     {
-      "id": "senior-cv-engineer",
-      "title": {
-        "en": "Senior Computer Vision Engineer",
-        "pl": "Senior Computer Vision Engineer"
-      },
-      "company": "TechVision AI",
-      "period": "2022 - Present",
-      "description": {
-        "en": [
-          "Lead development of real-time object tracking system processing 100+ camera feeds",
-          "Reduced inference latency by 60% through model optimization and quantization",
-          "Mentored team of 5 junior engineers in CV/ML best practices",
-          "Deployed production ML pipelines serving 1M+ requests/day"
-        ],
-        "pl": [
-          "Prowadzenie rozwoju systemu śledzenia obiektów w czasie rzeczywistym przetwarzającego 100+ strumieni kamer",
-          "Redukcja latencji inferecji o 60% poprzez optymalizację i kwantyzację modeli",
-          "Mentoring zespołu 5 młodszych inżynierów w zakresie CV/ML best practices",
-          "Wdrożenie produkcyjnych pipeline'ów ML obsługujących 1M+ requestów/dzień"
-        ]
-      },
-      "tags": ["Python", "TensorFlow", "PyTorch", "CUDA", "Docker", "Kubernetes"]
-    },
-    {
-      "id": "cv-engineer",
+      "id": "samsung-cv-engineer",
       "title": {
         "en": "Computer Vision Engineer",
         "pl": "Computer Vision Engineer"
       },
-      "company": "Robotics Corp",
-      "period": "2020 - 2022",
+      "company": "Samsung Electronics",
+      "logo": "/images/companies/samsung.png",
+      "period": "March 2023 - Present",
       "description": {
         "en": [
-          "Developed perception stack for autonomous mobile robots",
-          "Implemented SLAM algorithms for indoor navigation",
-          "Built custom annotation tools for training data generation",
-          "Collaborated with hardware team on camera sensor selection"
+          "Development of proof of concepts based on computer vision technologies: facial landmarks detection, background segmentation, Structure from Motion, Gaussian Splatting and NeRF",
+          "Research and testing solutions from scientific articles",
+          "Training machine learning models and hyperparameter tuning"
         ],
         "pl": [
-          "Rozwój stosu percepcji dla autonomicznych robotów mobilnych",
-          "Implementacja algorytmów SLAM do nawigacji wewnętrznej",
-          "Budowa niestandardowych narzędzi do anotacji danych treningowych",
-          "Współpraca z zespołem hardware przy wyborze sensorów kamer"
+          "Rozwój prototypów opartych na technologiach computer vision: detekcja punktów charakterystycznych twarzy, segmentacja tła, Structure from Motion, Gaussian Splatting i NeRF",
+          "Badania i testowanie rozwiązań z artykułów naukowych",
+          "Trenowanie modeli uczenia maszynowego i dostrajanie hiperparametrów"
         ]
       },
-      "tags": ["C++", "OpenCV", "ROS", "Point Cloud", "SLAM"]
+      "tags": ["C++", "Python", "PyTorch", "CUDA", "Docker", "CMake", "Linux"]
     },
     {
-      "id": "software-engineer",
+      "id": "mnemosis-cv-engineer",
       "title": {
-        "en": "Software Engineer",
-        "pl": "Software Engineer"
+        "en": "Computer Vision Engineer",
+        "pl": "Computer Vision Engineer"
       },
-      "company": "StartupXYZ",
-      "period": "2018 - 2020",
+      "company": "Mnemosis",
+      "logo": "/images/companies/mnemosis.png",
+      "period": "July 2021 - February 2023",
       "description": {
         "en": [
-          "Built full-stack web applications using React and Node.js",
-          "Designed and implemented RESTful APIs and GraphQL services",
-          "Maintained CI/CD pipelines and cloud infrastructure on AWS",
-          "Participated in agile development and code reviews"
+          "Development of algorithms for 2D/3D/4D data processing in C++: optimization problems, object detection and perspective projection",
+          "Prototyping in Python and use of multithreading in algorithms",
+          "Preparing apps for distributed computing",
+          "Code review, unit testing, working in Scrum and CI/CD"
         ],
         "pl": [
-          "Budowa aplikacji full-stack używając React i Node.js",
-          "Projektowanie i implementacja RESTful API i serwisów GraphQL",
-          "Utrzymanie CI/CD pipeline'ów i infrastruktury w chmurze AWS",
-          "Udział w agile development i code reviews"
+          "Rozwój algorytmów przetwarzania danych 2D/3D/4D w C++: problemy optymalizacyjne, detekcja obiektów i projekcja perspektywiczna",
+          "Prototypowanie w Python i wykorzystanie wielowątkowości w algorytmach",
+          "Przygotowanie aplikacji do obliczeń rozproszonych",
+          "Code review, testy jednostkowe, praca w Scrum i CI/CD"
         ]
       },
-      "tags": ["JavaScript", "React", "Node.js", "AWS", "PostgreSQL"]
+      "tags": ["C++", "Python", "Docker", "CMake", "Jira", "Scrum"]
+    },
+    {
+      "id": "smarttech-junior-dev",
+      "title": {
+        "en": "Junior C++ Developer",
+        "pl": "Junior C++ Developer"
+      },
+      "company": "Smarttech3D Metrology",
+      "logo": "/images/companies/smarttech.png",
+      "period": "August 2020 - June 2021",
+      "description": {
+        "en": [
+          "Proof of concept of the company's new product based on Arduino",
+          "Implementation of algorithms and solutions for image processing or 3D scanning in C++",
+          "Working with LiDAR and photogrammetry",
+          "Prototyping solutions in Python"
+        ],
+        "pl": [
+          "Proof of concept nowego produktu firmy opartego na Arduino",
+          "Implementacja algorytmów i rozwiązań do przetwarzania obrazu i skanowania 3D w C++",
+          "Praca z LiDAR i fotogrametrią",
+          "Prototypowanie rozwiązań w Python"
+        ]
+      },
+      "tags": ["C++", "Python", "OpenCV", "Eigen", "Arduino", "LiDAR"]
     }
   ]
 }

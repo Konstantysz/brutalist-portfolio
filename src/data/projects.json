@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "vision-craft",
+      "title": {
+        "en": "VisionCraft - Visual Node Editor for CV",
+        "pl": "VisionCraft - Wizualny edytor węzłów CV"
+      },
+      "description": {
+        "en": "Modern C++20 computer vision node editor with intuitive visual programming interface. Build complex CV pipelines through drag-and-drop node system with real-time processing.",
+        "pl": "Nowoczesny edytor węzłów computer vision w C++20 z intuicyjnym interfejsem programowania wizualnego. Twórz złożone pipeline'y CV poprzez system drag-and-drop z przetwarzaniem w czasie rzeczywistym."
+      },
+      "tags": ["C++20", "OpenCV", "ImGui", "GLFW", "Node Editor"],
+      "github": "https://github.com/Konstantysz/vision-craft",
+      "image": "/images/project-1.png"
+    },
+    {
       "id": "object-detection",
       "title": {
         "en": "Real-time Object Detection System",
@@ -11,8 +25,7 @@
         "pl": "Niestandardowy pipeline detekcji obiektów oparty na CNN, zoptymalizowany pod urządzenia brzegowe. Osiągnięto 30 FPS na Raspberry Pi 4 z 85% mAP."
       },
       "tags": ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
-      "github": "https://github.com/yourusername/object-detection",
-      "image": "/images/project-1.png"
+      "github": "https://github.com/yourusername/object-detection"
     },
     {
       "id": "face-recognition",
@@ -25,8 +38,7 @@
         "pl": "System rozpoznawania twarzy działający lokalnie bez zależności od chmury. Wykorzystuje niestandardowy model embedingów trenowany na 10M twarzy."
       },
       "tags": ["PyTorch", "ONNX", "C++", "Privacy"],
-      "github": "https://github.com/yourusername/face-recognition",
-      "image": "/images/project-2.png"
+      "github": "https://github.com/yourusername/face-recognition"
     },
     {
       "id": "segmentation-tool",
@@ -39,8 +51,7 @@
         "pl": "Narzędzie segmentacji oparte na U-Net dla obrazowania medycznego. Obsługuje segmentację wieloklasową z podglądem w czasie rzeczywistym."
       },
       "tags": ["Python", "U-Net", "Medical Imaging", "Flask"],
-      "github": "https://github.com/yourusername/medical-segmentation",
-      "image": "/images/project-3.png"
+      "github": "https://github.com/yourusername/medical-segmentation"
     },
     {
       "id": "pose-estimation",
@@ -53,8 +64,7 @@
         "pl": "Lekka biblioteka do estymacji pozy 3D człowieka z wideo monokularnego. Napisana w Rust z bindingami Python."
       },
       "tags": ["Rust", "Python", "3D Vision", "WebAssembly"],
-      "github": "https://github.com/yourusername/pose-estimation",
-      "image": "/images/project-4.png"
+      "github": "https://github.com/yourusername/pose-estimation"
     }
   ]
 }

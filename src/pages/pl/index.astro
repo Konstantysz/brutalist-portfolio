@@ -1,119 +1,138 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import '../../styles/global.css';
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konstanty Szumigaj - Inżynier Widzenia Maszynowego</title>
-  <meta name="description" content="Portfolio inżyniera widzenia maszynowego i Software Engineering specjalizującego się w systemach ML czasu rzeczywistego.">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
-<body>
-  <Header lang="pl" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konstanty Szumigaj - Inżynier Widzenia Maszynowego</title>
+    <meta
+      name="description"
+      content="Portfolio inżyniera widzenia maszynowego i Software Engineering specjalizującego się w systemach ML czasu rzeczywistego."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header lang="pl" />
 
-  <main class="container">
-    <!-- INTRO -->
-    <section class="section">
-      <h1>Konstanty Szumigaj</h1>
-      <h2 class="text-accent">Inżynier Widzenia Maszynowego / Software Developer</h2>
+    <main class="container">
+      <!-- INTRO -->
+      <section class="section">
+        <h1>Konstanty Szumigaj</h1>
+        <h2 class="text-accent">
+          Inżynier Widzenia Maszynowego / Software Developer
+        </h2>
 
-      <p>
-        Buduję inteligentne systemy wizyjne przetwarzające świat w czasie rzeczywistym.
-        Specjalizacja: detekcja obiektów, tracking i wdrożenia brzegowe.
-      </p>
+        <p>
+          Buduję inteligentne systemy wizyjne przetwarzające świat w czasie
+          rzeczywistym. Specjalizacja: detekcja obiektów, tracking i wdrożenia
+          brzegowe.
+        </p>
 
-      <p class="text-mono">
-        [Python] [C++] [TensorFlow] [PyTorch] [OpenCV] [CUDA]
-      </p>
-    </section>
+        <p class="text-mono">
+          [Python] [C++] [TensorFlow] [PyTorch] [OpenCV] [CUDA]
+        </p>
+      </section>
 
-    <!-- BIO -->
-    <section class="section">
-      <h2 class="section-title">O mnie</h2>
+      <!-- BIO -->
+      <section class="section">
+        <h2 class="section-title">O mnie</h2>
 
-      <p>
-        Jestem inżynierem Widzenia Maszynowego z <strong>5+ laty</strong> doświadczenia w budowaniu
-        produkcyjnych systemów ML. Moja praca skupia się na <strong>detekcji obiektów w czasie rzeczywistym</strong>,
-        <strong>wizji 3D</strong> i <strong>wdrożeniach AI na urządzenia brzegowe</strong>.
-      </p>
+        <p>
+          Jestem inżynierem Widzenia Maszynowego z <strong>5+ laty</strong> doświadczenia
+          w budowaniu produkcyjnych systemów ML. Moja praca skupia się na <strong
+            >detekcji obiektów w czasie rzeczywistym</strong
+          >,
+          <strong>wizji 3D</strong> i <strong
+            >wdrożeniach AI na urządzenia brzegowe</strong
+          >.
+        </p>
 
-      <p>
-        Wcześniej pracowałem przy autonomicznej robotyce, analizie obrazowania medycznego oraz
-        pipeline'ach przetwarzania wideo na dużą skalę. Wierzę w pisanie czystego,
-        wydajnego kodu i dostarczanie produktów, które faktycznie działają.
-      </p>
+        <p>
+          Wcześniej pracowałem przy autonomicznej robotyce, analizie obrazowania
+          medycznego oraz pipeline'ach przetwarzania wideo na dużą skalę. Wierzę
+          w pisanie czystego, wydajnego kodu i dostarczanie produktów, które
+          faktycznie działają.
+        </p>
 
-      <p class="mb-0">
-        Gdy nie trenuję modeli, kontrybuuję do projektów open-source i
-        piszę o fundamentach computer vision.
-      </p>
-    </section>
+        <p class="mb-0">
+          Gdy nie trenuję modeli, kontrybuuję do projektów open-source i piszę o
+          fundamentach computer vision.
+        </p>
+      </section>
 
-    <!-- STATYSTYKI -->
-    <section class="section">
-      <h2 class="section-title">Szybkie statystyki</h2>
+      <!-- STATYSTYKI -->
+      <section class="section">
+        <h2 class="section-title">Szybkie statystyki</h2>
 
-      <div class="grid">
-        <div class="stat-box">
-          <div class="stat-number text-accent">5+</div>
-          <div class="stat-label">Lat w CV/ML</div>
+        <div class="grid">
+          <div class="stat-box">
+            <div class="stat-number text-accent">5+</div>
+            <div class="stat-label">Lat w CV/ML</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number text-accent">10+</div>
+            <div class="stat-label">Modeli produkcyjnych</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number text-accent">1M+</div>
+            <div class="stat-label">Inferencji dziennie</div>
+          </div>
         </div>
-        <div class="stat-box">
-          <div class="stat-number text-accent">10+</div>
-          <div class="stat-label">Modeli produkcyjnych</div>
+      </section>
+
+      <!-- PROJEKTY -->
+      <section class="section">
+        <h2 class="section-title">Wybrane projekty</h2>
+
+        <p>
+          Wybrana praca z zakresu computer vision i software engineering.
+          <a href="/pl/projects">[Zobacz wszystkie projekty →]</a>
+        </p>
+
+        <div class="featured-list">
+          <div class="featured-item">
+            <h3>System detekcji obiektów w czasie rzeczywistym</h3>
+            <p>
+              Niestandardowy pipeline CNN dla urządzeń brzegowych. 30 FPS na
+              Raspberry Pi 4.
+            </p>
+            <span class="text-mono text-accent"
+              >[Python, TensorFlow, OpenCV]</span
+            >
+          </div>
+
+          <div class="featured-item">
+            <h3>Biblioteka estymacji pozy 3D</h3>
+            <p>
+              Lekka biblioteka w Rust z bindingami Python do monokularnaj pozy
+              3D.
+            </p>
+            <span class="text-mono text-accent"
+              >[Rust, Python, WebAssembly]</span
+            >
+          </div>
         </div>
-        <div class="stat-box">
-          <div class="stat-number text-accent">1M+</div>
-          <div class="stat-label">Inferencji dziennie</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROJEKTY -->
-    <section class="section">
-      <h2 class="section-title">Wybrane projekty</h2>
+      <!-- KONTAKT -->
+      <section class="section">
+        <h2 class="section-title">Skontaktuj się</h2>
 
-      <p>
-        Wybrana praca z zakresu computer vision i software engineering.
-        <a href="/pl/projects">[Zobacz wszystkie projekty →]</a>
-      </p>
+        <p>Otwarty na konsulting, współpracę i ciekawe projekty CV/ML.</p>
 
-      <div class="featured-list">
-        <div class="featured-item">
-          <h3>System detekcji obiektów w czasie rzeczywistym</h3>
-          <p>Niestandardowy pipeline CNN dla urządzeń brzegowych. 30 FPS na Raspberry Pi 4.</p>
-          <span class="text-mono text-accent">[Python, TensorFlow, OpenCV]</span>
-        </div>
+        <p class="mb-0">
+          <a href="/pl/contact"><strong>[Skontaktuj się →]</strong></a>
+        </p>
+      </section>
+    </main>
 
-        <div class="featured-item">
-          <h3>Biblioteka estymacji pozy 3D</h3>
-          <p>Lekka biblioteka w Rust z bindingami Python do monokularnaj pozy 3D.</p>
-          <span class="text-mono text-accent">[Rust, Python, WebAssembly]</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section class="section">
-      <h2 class="section-title">Skontaktuj się</h2>
-
-      <p>
-        Otwarty na konsulting, współpracę i ciekawe projekty CV/ML.
-      </p>
-
-      <p class="mb-0">
-        <a href="/pl/contact"><strong>[Skontaktuj się →]</strong></a>
-      </p>
-    </section>
-  </main>
-
-  <Footer lang="pl" />
-</body>
+    <Footer lang="pl" />
+  </body>
 </html>
 
 <style>

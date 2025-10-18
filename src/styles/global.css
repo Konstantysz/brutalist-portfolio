@@ -4,21 +4,21 @@
 
 :root {
   /* Light mode colors */
-  --bg: #FFFFFF;
+  --bg: #ffffff;
   --text: #000000;
   --border: #000000;
-  --accent: #DC143C;
+  --accent: #dc143c;
   --hover-bg: #000000;
-  --hover-text: #FFFFFF;
+  --hover-text: #ffffff;
 }
 
 [data-theme="dark"] {
   /* Dark mode colors */
   --bg: #000000;
-  --text: #FFFFFF;
-  --border: #FFFFFF;
-  --accent: #DC143C ;
-  --hover-bg: #FFFFFF;
+  --text: #ffffff;
+  --border: #ffffff;
+  --accent: #dc143c;
+  --hover-bg: #ffffff;
   --hover-text: #000000;
 }
 
@@ -46,7 +46,12 @@ body {
 /* TYPOGRAPHY                    */
 /* ============================= */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 16px;
@@ -69,7 +74,8 @@ p {
   margin-bottom: 16px;
 }
 
-code, .mono {
+code,
+.mono {
   font-family: monospace;
   background-color: var(--text);
   color: var(--bg);
@@ -113,7 +119,8 @@ a:hover {
   border-bottom-color: var(--accent);
 }
 
-button, .button {
+button,
+.button {
   background-color: var(--bg);
   color: var(--text);
   border: 1px solid var(--border);
@@ -125,7 +132,8 @@ button, .button {
   font-weight: bold;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: var(--hover-bg);
   color: var(--hover-text);
   border-color: var(--border);
@@ -136,14 +144,19 @@ button:hover, .button:hover {
 /* ============================= */
 
 header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
   border-bottom: 1px solid var(--border);
   margin-bottom: 32px;
+  z-index: 100;
 }
 
 footer {
   border-top: 1px solid var(--border);
   margin-top: 32px;
-  padding-top: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 nav ul {
@@ -162,13 +175,6 @@ nav a {
 /* ============================= */
 /* CONTROLS (theme, lang)        */
 /* ============================= */
-
-.controls {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 16px;
-}
 
 .controls button {
   padding: 4px 12px;
@@ -280,11 +286,21 @@ nav a {
   font-family: monospace;
 }
 
-.mb-0 { margin-bottom: 0; }
-.mb-8 { margin-bottom: 8px; }
-.mb-16 { margin-bottom: 16px; }
-.mb-24 { margin-bottom: 24px; }
-.mb-32 { margin-bottom: 32px; }
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
 
 /* ============================= */
 /* RESPONSIVE                    */

@@ -1,49 +1,54 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
-import '../../styles/global.css';
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import "../../styles/global.css";
 
-import projectsData from '../../data/projects.json';
+import projectsData from "../../data/projects.json";
 
-const lang = 'pl';
+const lang = "pl";
 const projects = projectsData.projects;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projekty - Konstanty Szumigaj</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="description" content="Projekty z zakresu computer vision i software engineering">
-</head>
-<body>
-  <Header lang="pl" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekty - Konstanty Szumigaj</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Projekty z zakresu computer vision i software engineering"
+    />
+  </head>
+  <body>
+    <Header lang="pl" />
 
-  <main class="container">
-    <section class="section">
-      <h1>Projekty</h1>
-      <p>
-        Wybrana praca z zakresu computer vision, machine learning i software engineering.
-        Wszystkie projekty są open-source i dostępne na GitHub.
-      </p>
-    </section>
+    <main class="container">
+      <section class="section">
+        <h1>Projekty</h1>
+        <p>
+          Wybrana praca z zakresu computer vision, machine learning i software
+          engineering. Wszystkie projekty są open-source i dostępne na GitHub.
+        </p>
+      </section>
 
-    <div class="grid">
-      {projects.map((project) => (
-        <ProjectCard
-          title={project.title[lang]}
-          description={project.description[lang]}
-          tags={project.tags}
-          github={project.github}
-          image={project.image}
-        />
-      ))}
-    </div>
-  </main>
+      <div class="grid">
+        {
+          projects.map((project) => (
+            <ProjectCard
+              title={project.title[lang]}
+              description={project.description[lang]}
+              tags={project.tags}
+              github={project.github}
+              image={project.image}
+            />
+          ))
+        }
+      </div>
+    </main>
 
-  <Footer lang="pl" />
-</body>
+    <Footer lang="pl" />
+  </body>
 </html>

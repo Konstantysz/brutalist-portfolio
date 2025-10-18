@@ -1,19 +1,19 @@
 ---
 interface Props {
-  lang?: 'en' | 'pl';
+  lang?: "en" | "pl";
 }
 
-const { lang = 'en' } = Astro.props;
+const { lang = "en" } = Astro.props;
 
 const translations = {
   en: {
-    built: 'Built with',
-    code: 'View source on',
+    built: "Built with",
+    code: "View source on",
   },
   pl: {
-    built: 'Zbudowane z',
-    code: 'Zobacz kod na',
-  }
+    built: "Zbudowane z",
+    code: "Zobacz kod na",
+  },
 };
 
 const t = translations[lang];
@@ -24,19 +24,27 @@ const currentYear = new Date().getFullYear();
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <p class="mb-8">
-          <span class="text-mono">&copy; {currentYear}</span>
-        </p>
         <p class="mb-0">
-          {t.built} <strong>Astro</strong> + <strong>Brutalism</strong>
+          <span class="text-mono">&copy; {currentYear}</span> | {t.built}
+          <strong>Astro</strong>
         </p>
       </div>
 
       <div class="footer-section">
         <nav>
           <ul>
-            <li><a href="https://github.com/konstantysz" target="_blank" rel="noopener">[GitHub]</a></li>
-            <li><a href="https://linkedin.com/in/konstanty-szumigaj" target="_blank" rel="noopener">[LinkedIn]</a></li>
+            <li>
+              <a
+                href="https://github.com/konstantysz"
+                target="_blank"
+                rel="noopener">[GitHub]</a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/konstanty-szumigaj"
+                target="_blank"
+                rel="noopener">[LinkedIn]</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -59,8 +67,8 @@ const currentYear = new Date().getFullYear();
   }
 
   footer nav ul {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 16px;
   }
 
   @media (max-width: 768px) {

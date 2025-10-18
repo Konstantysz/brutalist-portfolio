@@ -1,129 +1,143 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import '../../styles/global.css';
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt - Konstanty Szumigaj</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="description" content="Skontaktuj się w sprawie konsultingu computer vision i ML">
-</head>
-<body>
-  <Header lang="pl" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt - Konstanty Szumigaj</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Skontaktuj się w sprawie konsultingu computer vision i ML"
+    />
+  </head>
+  <body>
+    <Header lang="pl" />
 
-  <main class="container">
-    <section class="section">
-      <h1>Kontakt</h1>
-      <p>
-        Otwarty na konsulting, współpracę i ciekawe projekty z zakresu computer vision.
-        Skontaktuj się za pomocą dowolnego z poniższych kanałów.
-      </p>
-    </section>
+    <main class="container">
+      <section class="section">
+        <h1>Kontakt</h1>
+        <p>
+          Otwarty na konsulting, współpracę i ciekawe projekty z zakresu
+          computer vision. Skontaktuj się za pomocą dowolnego z poniższych
+          kanałów.
+        </p>
+      </section>
 
-    <section class="section">
-      <h2 class="section-title">Skontaktuj się</h2>
+      <section class="section">
+        <h2 class="section-title">Skontaktuj się</h2>
 
-      <div class="contact-info">
-        <div class="contact-item">
-          <span class="label">Email:</span>
-          <a href="mailto:kostekszumigaj@gmail.com">kostekszumigaj@gmail.com</a>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="label">Email:</span>
+            <a href="mailto:kostekszumigaj@gmail.com"
+              >kostekszumigaj@gmail.com</a
+            >
+          </div>
+
+          <div class="contact-item">
+            <span class="label">GitHub:</span>
+            <a
+              href="https://github.com/konstantysz"
+              target="_blank"
+              rel="noopener">github.com/konstantysz</a
+            >
+          </div>
+
+          <div class="contact-item">
+            <span class="label">LinkedIn:</span>
+            <a
+              href="https://linkedin.com/in/konstanty-szumigaj"
+              target="_blank"
+              rel="noopener">linkedin.com/in/konstanty-szumigaj</a
+            >
+          </div>
         </div>
+      </section>
 
-        <div class="contact-item">
-          <span class="label">GitHub:</span>
-          <a href="https://github.com/konstantysz" target="_blank" rel="noopener">github.com/konstantysz</a>
+      <section class="section">
+        <h2 class="section-title">Co robię</h2>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>[01] Konsulting</h3>
+            <p>
+              Architektura systemów computer vision, projektowanie pipeline'ów
+              ML, optymalizacja modeli i strategie wdrożeniowe.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <h3>[02] Development</h3>
+            <p>
+              Niestandardowe rozwiązania CV/ML, systemy inferencji czasu
+              rzeczywistego, wdrożenia edge AI i usługi integracyjne.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <h3>[03] Research</h3>
+            <p>
+              Badania aplikacyjne w detekcji obiektów, trackingu, wizji 3D i
+              nowatorskich zastosowaniach computer vision.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <h3>[04] Szkolenia</h3>
+            <p>
+              Warsztaty techniczne, szkolenia zespołowe i transfer wiedzy z
+              zakresu computer vision i ML.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="contact-item">
-          <span class="label">LinkedIn:</span>
-          <a href="https://linkedin.com/in/konstanty-szumigaj" target="_blank" rel="noopener">linkedin.com/in/konstanty-szumigaj</a>
+      <section class="section">
+        <h2 class="section-title">Czas odpowiedzi</h2>
+
+        <p>
+          Zazwyczaj odpowiadam na emaile w ciągu <strong>24-48 godzin</strong> w
+          dni robocze. W pilnych sprawach proszę o dodanie "PILNE" w temacie wiadomości.
+        </p>
+
+        <p class="mb-0">
+          Przed skontaktowaniem się, sprawdź proszę moje
+          <a href="/pl/projects">projekty</a> i
+          <a href="/pl/experience">doświadczenie</a>, aby sprawdzić, czy moje
+          umiejętności odpowiadają Twoim potrzebom.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Lokalizacja i dostępność</h2>
+
+        <div class="availability-info">
+          <div class="info-block">
+            <h3>Lokalizacja</h3>
+            <p class="text-mono">Warszawa, Polska (GMT+1)</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Praca zdalna</h3>
+            <p class="text-mono">Dostępna na całym świecie</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Języki</h3>
+            <p class="text-mono">Angielski (płynny) · Polski (ojczysty)</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="section">
-      <h2 class="section-title">Co robię</h2>
-
-      <div class="services-grid">
-        <div class="service-item">
-          <h3>[01] Konsulting</h3>
-          <p>
-            Architektura systemów computer vision, projektowanie pipeline'ów ML,
-            optymalizacja modeli i strategie wdrożeniowe.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>[02] Development</h3>
-          <p>
-            Niestandardowe rozwiązania CV/ML, systemy inferencji czasu rzeczywistego,
-            wdrożenia edge AI i usługi integracyjne.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>[03] Research</h3>
-          <p>
-            Badania aplikacyjne w detekcji obiektów, trackingu, wizji 3D
-            i nowatorskich zastosowaniach computer vision.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>[04] Szkolenia</h3>
-          <p>
-            Warsztaty techniczne, szkolenia zespołowe i transfer wiedzy
-            z zakresu computer vision i ML.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Czas odpowiedzi</h2>
-
-      <p>
-        Zazwyczaj odpowiadam na emaile w ciągu <strong>24-48 godzin</strong> w dni robocze.
-        W pilnych sprawach proszę o dodanie "PILNE" w temacie wiadomości.
-      </p>
-
-      <p class="mb-0">
-        Przed skontaktowaniem się, sprawdź proszę moje
-        <a href="/pl/projects">projekty</a> i
-        <a href="/pl/experience">doświadczenie</a>, aby sprawdzić, czy moje
-        umiejętności odpowiadają Twoim potrzebom.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Lokalizacja i dostępność</h2>
-
-      <div class="availability-info">
-        <div class="info-block">
-          <h3>Lokalizacja</h3>
-          <p class="text-mono">Warszawa, Polska (GMT+1)</p>
-        </div>
-
-        <div class="info-block">
-          <h3>Praca zdalna</h3>
-          <p class="text-mono">Dostępna na całym świecie</p>
-        </div>
-
-        <div class="info-block">
-          <h3>Języki</h3>
-          <p class="text-mono">Angielski (płynny) · Polski (ojczysty)</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <Footer lang="pl" />
-</body>
+    <Footer lang="pl" />
+  </body>
 </html>
 
 <style>

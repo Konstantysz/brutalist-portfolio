@@ -11,32 +11,46 @@ const { title, description, tags, github, image } = Astro.props;
 ---
 
 <article class="project-card">
-  {image && (
-    <div class="project-image">
-      <div class="image-placeholder">[IMAGE]</div>
-    </div>
-  )}
+  <div class="project-image">
+    {
+      image ? (
+        <img src={image} alt={title} />
+      ) : (
+        <div class="image-placeholder">[IMAGE]</div>
+      )
+    }
+  </div>
 
   <h3>{title}</h3>
 
   <div class="tags">
-    {tags.map((tag) => (
-      <span class="tag">{tag}</span>
-    ))}
+    {tags.map((tag) => <span class="tag">{tag}</span>)}
   </div>
 
   <p>{description}</p>
 
-  {github && (
-    <div class="project-links">
-      <a href={github} target="_blank" rel="noopener">[View on GitHub →]</a>
-    </div>
-  )}
+  {
+    github && (
+      <div class="project-links">
+        <a href={github} target="_blank" rel="noopener">
+          [View on GitHub →]
+        </a>
+      </div>
+    )
+  }
 </article>
 
 <style>
   .project-image {
     margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
   }
 
   .image-placeholder {
