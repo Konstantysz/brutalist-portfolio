@@ -8,7 +8,7 @@ The site should merge **professionalism and rawness** with an **alternative pers
 ---
 
 ## 👤 Author
-**Name:** [Your Name]  
+**Name:** Konstanty Szumigaj  
 **Roles:**  
 - Primary: Computer Vision Engineer  
 - Secondary: Software Engineer
