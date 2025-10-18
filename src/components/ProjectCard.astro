@@ -11,15 +11,13 @@ const { title, description, tags, github, image } = Astro.props;
 ---
 
 <article class="project-card">
-  <div class="project-image">
-    {
-      image ? (
+  {
+    image && (
+      <div class="project-image">
         <img src={image} alt={title} />
-      ) : (
-        <div class="image-placeholder">[IMAGE]</div>
-      )
-    }
-  </div>
+      </div>
+    )
+  }
 
   <h3>{title}</h3>
 

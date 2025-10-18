@@ -15,56 +15,17 @@
       "image": "/images/project-1.png"
     },
     {
-      "id": "object-detection",
+      "id": "kappa-core",
       "title": {
-        "en": "Real-time Object Detection System",
-        "pl": "System detekcji obiektów w czasie rzeczywistym"
+        "en": "Kappa Core - OpenGL Application Framework",
+        "pl": "Kappa Core - Framework aplikacji OpenGL"
       },
       "description": {
-        "en": "Custom CNN-based object detection pipeline optimized for edge devices. Achieved 30 FPS on Raspberry Pi 4 with 85% mAP.",
-        "pl": "Niestandardowy pipeline detekcji obiektów oparty na CNN, zoptymalizowany pod urządzenia brzegowe. Osiągnięto 30 FPS na Raspberry Pi 4 z 85% mAP."
+        "en": "Modern C++20 application framework providing infrastructure for OpenGL applications. Features layer-based architecture, event system, window management, texture handling, and comprehensive logging with CI/CD pipeline.",
+        "pl": "Nowoczesny framework aplikacji w C++20 dostarczający infrastrukturę dla aplikacji OpenGL. Zawiera architekturę warstwową, system eventów, zarządzanie oknem, obsługę tekstur oraz kompleksowe logowanie z pipeline CI/CD."
       },
-      "tags": ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
-      "github": "https://github.com/yourusername/object-detection"
-    },
-    {
-      "id": "face-recognition",
-      "title": {
-        "en": "Privacy-First Face Recognition",
-        "pl": "System rozpoznawania twarzy z zachowaniem prywatności"
-      },
-      "description": {
-        "en": "On-device face recognition system with zero cloud dependency. Uses custom embedding model trained on 10M faces.",
-        "pl": "System rozpoznawania twarzy działający lokalnie bez zależności od chmury. Wykorzystuje niestandardowy model embedingów trenowany na 10M twarzy."
-      },
-      "tags": ["PyTorch", "ONNX", "C++", "Privacy"],
-      "github": "https://github.com/yourusername/face-recognition"
-    },
-    {
-      "id": "segmentation-tool",
-      "title": {
-        "en": "Medical Image Segmentation Tool",
-        "pl": "Narzędzie do segmentacji obrazów medycznych"
-      },
-      "description": {
-        "en": "U-Net based segmentation tool for medical imaging. Supports multi-class segmentation with real-time preview.",
-        "pl": "Narzędzie segmentacji oparte na U-Net dla obrazowania medycznego. Obsługuje segmentację wieloklasową z podglądem w czasie rzeczywistym."
-      },
-      "tags": ["Python", "U-Net", "Medical Imaging", "Flask"],
-      "github": "https://github.com/yourusername/medical-segmentation"
-    },
-    {
-      "id": "pose-estimation",
-      "title": {
-        "en": "3D Pose Estimation Library",
-        "pl": "Biblioteka estymacji pozy 3D"
-      },
-      "description": {
-        "en": "Lightweight library for 3D human pose estimation from monocular video. Written in Rust with Python bindings.",
-        "pl": "Lekka biblioteka do estymacji pozy 3D człowieka z wideo monokularnego. Napisana w Rust z bindingami Python."
-      },
-      "tags": ["Rust", "Python", "3D Vision", "WebAssembly"],
-      "github": "https://github.com/yourusername/pose-estimation"
+      "tags": ["C++20", "OpenGL", "GLFW", "CMake", "Framework"],
+      "github": "https://github.com/Konstantysz/kappa-core"
     }
   ]
 }

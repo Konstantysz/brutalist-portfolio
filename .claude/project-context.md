@@ -23,10 +23,11 @@ The site should merge **professionalism and rawness** with an **alternative pers
 - `/contact` – Contact info, services offered, availability
 
 ### Additional Elements:
-- Downloadable CV (available on /experience page)
+- Downloadable CV (dual format: EN and PL PDFs on /experience page)
 - Bilingual support (PL / EN) - full translation for all content
 - Light & dark mode with persistent storage
 - Company/university logos (80x80px with brutalist borders)
+- Smart language switching that preserves current page context
 
 ---
 
@@ -149,10 +150,15 @@ The site should communicate:
 - ✅ Dark/Light theme with localStorage persistence
 - ✅ Navigation: Home → Experience → Projects → Contact
 - ✅ Theme/Language controls positioned on the right
+- ✅ Smart language switching (preserves current page)
+- ✅ Sticky header (always visible)
 - ✅ Work experience with company logos (80x80px)
 - ✅ Education section with university logo
 - ✅ Publications with full citation and PDF link
 - ✅ Projects with tags, descriptions, and GitHub links
+- ✅ Projects without images render without image placeholder
+- ✅ Dual CV download (EN and PL PDFs)
+- ✅ Footer links displayed horizontally
 - ✅ Custom favicon (KS initials, red on black)
 - ✅ Responsive design for mobile/desktop
 - ✅ Legal disclaimer for company logos
@@ -163,7 +169,9 @@ The site should communicate:
 - Current employers: Samsung Electronics (2023-Present)
 - Education: Warsaw University of Technology (MSc & BSc Mechatronics)
 - Publication: DeepVID in Journal of Optics (2023)
-- Featured project: VisionCraft (C++20 CV node editor)
+- Featured projects:
+  - VisionCraft (C++20 CV node editor with ImGui interface)
+  - Kappa Core (C++20 OpenGL application framework)
 
 ---
 
@@ -174,5 +182,4 @@ The site should communicate:
 - Consider blog section (Astro content collections)
 - Optionally integrate GitHub API for dynamic project fetching
 - Header should become a sidebar on mobile devices
-- Allow projects without images to display no image placeholder on their card
 - Update home page content
