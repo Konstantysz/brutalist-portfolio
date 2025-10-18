@@ -66,12 +66,14 @@ npm run dev
 ### Customization
 
 1. **Personal Information**
+
    - Edit `src/data/projects.json` - Add your projects
    - Edit `src/data/experience.json` - Add your work history
    - Update contact links in `src/components/Footer.astro`
    - Update contact info in `src/pages/contact.astro` and `src/pages/pl/contact.astro`
 
 2. **Replace Placeholders**
+
    - Change "YOUR NAME" in all page files
    - Replace `yourusername` with your GitHub/LinkedIn username
    - Replace `your.email@example.com` with your email
@@ -79,6 +81,7 @@ npm run dev
    - Add project images to `public/images/`
 
 3. **Color Scheme**
+
    - Edit CSS variables in `src/styles/global.css`
    - Default accent color: `#FF0000` (red)
    - Alternative: `#0047FF` (blue)
@@ -104,14 +107,16 @@ Output will be in `dist/` directory.
 ### GitHub Pages
 
 1. Update `astro.config.mjs`:
+
 ```js
 export default defineConfig({
-  site: 'https://yourusername.github.io',
-  base: '/brutalist-portfolio',
+  site: "https://yourusername.github.io",
+  base: "/brutalist-portfolio",
 });
 ```
 
 2. Build and deploy:
+
 ```bash
 npm run build
 # Deploy dist/ folder to GitHub Pages
@@ -148,6 +153,7 @@ MIT
 Built with Astro and brutalist design principles.
 
 Inspired by:
+
 - https://utrecht.jp
 - https://mechanisms.pl
 - https://nostalgic-css.github.io/NES.css
