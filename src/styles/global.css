@@ -306,21 +306,107 @@ nav a {
 /* RESPONSIVE                    */
 /* ============================= */
 
+/* Tablet and smaller */
 @media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
   h1 {
     font-size: 32px;
+    letter-spacing: 0;
   }
 
   h2 {
     font-size: 24px;
   }
 
+  h3 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 12px 16px;
+  }
+
+  .section {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   nav ul {
     flex-direction: column;
     gap: 12px;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  .button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  a {
+    padding: 2px 0;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 8px 12px;
+  }
+
+  .section {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  /* Make grid items stack better on very small screens */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Smaller gaps in navigation */
+  nav ul {
+    gap: 8px;
+  }
+
+  /* Better spacing for experience items */
+  .experience-item {
+    padding-left: 12px;
+    margin-bottom: 16px;
+  }
+
+  /* Adjust contact items for mobile */
+  .contact-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contact-item .label {
+    min-width: auto;
   }
 }

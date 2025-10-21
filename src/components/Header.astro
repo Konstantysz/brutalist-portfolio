@@ -49,7 +49,15 @@ if (currentPath === "/" || currentPath === "/pl" || currentPath === "/pl/") {
 <header>
   <div class="container">
     <div class="header-row">
-      <nav>
+      <!-- Mobile hamburger button -->
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav">
         <ul>
           <li><a href={`${basePath}/`}>[{t.home}]</a></li>
           <li><a href={`${basePath}/experience`}>[{t.experience}]</a></li>
@@ -68,6 +76,30 @@ if (currentPath === "/" || currentPath === "/pl" || currentPath === "/pl/") {
       </div>
     </div>
   </div>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Mobile sidebar -->
+  <nav class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-close" id="sidebar-close" aria-label="Close menu">✕</button>
+    </div>
+    <ul>
+      <li><a href={`${basePath}/`}>[{t.home}]</a></li>
+      <li><a href={`${basePath}/experience`}>[{t.experience}]</a></li>
+      <li><a href={`${basePath}/projects`}>[{t.projects}]</a></li>
+      <li><a href={`${basePath}/contact`}>[{t.contact}]</a></li>
+    </ul>
+    <div class="sidebar-controls">
+      <button id="theme-toggle-mobile">[{t.theme}]</button>
+      <div class="lang-switch">
+        <a href={enPath} class={lang === "en" ? "text-accent" : ""}>[EN]</a>
+        <span>/</span>
+        <a href={plPath} class={lang === "pl" ? "text-accent" : ""}>[PL]</a>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <script>
@@ -76,10 +108,55 @@ if (currentPath === "/" || currentPath === "/pl" || currentPath === "/pl/") {
   // Initialize theme on page load
   initTheme();
 
-  // Add click handler for theme toggle
+  // Add click handler for theme toggle (desktop)
   document
     .getElementById("theme-toggle")
     ?.addEventListener("click", toggleTheme);
+
+  // Add click handler for theme toggle (mobile sidebar)
+  document
+    .getElementById("theme-toggle-mobile")
+    ?.addEventListener("click", toggleTheme);
+
+  // Mobile sidebar functionality
+  const menuToggle = document.getElementById("menu-toggle");
+  const sidebarClose = document.getElementById("sidebar-close");
+  const sidebar = document.getElementById("mobile-sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
+
+  function openSidebar() {
+    sidebar?.classList.add("active");
+    overlay?.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeSidebar() {
+    sidebar?.classList.remove("active");
+    overlay?.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  // Open sidebar when clicking hamburger
+  menuToggle?.addEventListener("click", openSidebar);
+
+  // Close sidebar when clicking close button
+  sidebarClose?.addEventListener("click", closeSidebar);
+
+  // Close sidebar when clicking overlay
+  overlay?.addEventListener("click", closeSidebar);
+
+  // Close sidebar when clicking a link
+  const sidebarLinks = sidebar?.querySelectorAll("a");
+  sidebarLinks?.forEach((link) => {
+    link.addEventListener("click", closeSidebar);
+  });
+
+  // Close sidebar on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeSidebar();
+    }
+  });
 </script>
 
 <style>
@@ -108,15 +185,176 @@ if (currentPath === "/" || currentPath === "/pl" || currentPath === "/pl/") {
     font-weight: bold;
   }
 
+  /* Hamburger menu - hidden on desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: 1px solid var(--border);
+    padding: 8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text);
+  }
+
+  .hamburger:hover {
+    background-color: var(--hover-bg);
+  }
+
+  .hamburger:hover span {
+    background-color: var(--hover-text);
+  }
+
+  /* Mobile sidebar - hidden by default */
+  .mobile-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg);
+    border-right: 2px solid var(--border);
+    padding: 24px;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .mobile-sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-close {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .sidebar-close:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+  }
+
+  .mobile-sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .mobile-sidebar ul li a {
+    display: block;
+    padding: 12px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    font-size: 16px;
+  }
+
+  .mobile-sidebar ul li a:hover {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .sidebar-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .sidebar-controls button {
+    width: 100%;
+  }
+
+  .sidebar-controls .lang-switch {
+    justify-content: center;
+  }
+
   @media (max-width: 768px) {
-    .header-row {
-      flex-direction: column;
-      align-items: flex-start;
+    /* Show hamburger, hide desktop nav on mobile */
+    .hamburger {
+      display: flex;
     }
 
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-sidebar {
+      display: block;
+    }
+
+    .sidebar-overlay {
+      display: block;
+    }
+
+    .header-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Hide desktop controls on mobile - they're in the sidebar */
     .controls {
-      width: 100%;
-      justify-content: flex-start;
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mobile-sidebar {
+      width: 260px;
+      left: -260px;
+      padding: 16px;
+    }
+
+    .controls button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .lang-switch {
+      gap: 6px;
+      font-size: 12px;
     }
   }
 </style>
