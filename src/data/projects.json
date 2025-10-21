@@ -26,6 +26,20 @@
       },
       "tags": ["C++20", "OpenGL", "GLFW", "CMake", "Framework"],
       "github": "https://github.com/Konstantysz/kappa-core"
+    },
+    {
+      "id": "pyshiny-hunter",
+      "title": {
+        "en": "PyShiny Hunter - Pokemon Shiny Hunter",
+        "pl": "PyShiny Hunter - Łowca shiny Pokemon"
+      },
+      "description": {
+        "en": "Python-based automation tool for hunting shiny Pokemon in emulated games. Uses computer vision and automation techniques to detect and catch rare shiny variants efficiently.",
+        "pl": "Narzędzie automatyzacji w Pythonie do łowienia shiny Pokemon w emulowanych grach. Wykorzystuje techniki computer vision i automatyzacji do efektywnego wykrywania i łapania rzadkich shiny wariantów."
+      },
+      "tags": ["Python", "Computer Vision", "Automation", "OpenCV"],
+      "github": "https://github.com/Konstantysz/pyshiny-hunter",
+      "image": "/images/project-pyshiny-hunter.png"
     }
   ]
 }
