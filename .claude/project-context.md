@@ -85,7 +85,7 @@ The site should merge **professionalism and rawness** with an **alternative pers
  ├── images/
  │   ├── companies/               # Company logos (Samsung, Mnemosis, Smarttech)
  │   ├── education/               # University logos (PW)
- │   └── project-1.png            # Project thumbnails
+ │   └── vision-craft.png            # Project thumbnails
  ├── cv/
  │   └── cv.pdf                   # Downloadable CV
  └── favicon.svg                  # Custom favicon (KS in red on black)

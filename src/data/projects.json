@@ -1,6 +1,46 @@
 {
   "projects": [
     {
+      "id": "precision-guitar-tuner",
+      "title": {
+        "en": "Precision Guitar Tuner - Real-time Audio Tuner",
+        "pl": "Precision Guitar Tuner - Stroik gitarowy w czasie rzeczywistym"
+      },
+      "description": {
+        "en": "High-precision guitar tuner application with real-time audio processing. Features FFT-based pitch detection, multiple tuning modes, and clean ImGui interface. Built with modern C++20 using custom DSP and audio I/O libraries.",
+        "pl": "Aplikacja do precyzyjnego strojenia gitary z przetwarzaniem audio w czasie rzeczywistym. Zawiera detekcję wysokości dźwięku opartą na FFT, wiele trybów strojenia i czysty interfejs ImGui. Zbudowana w nowoczesnym C++20 z użyciem własnych bibliotek DSP i audio I/O."
+      },
+      "tags": ["C++20", "Audio DSP", "ImGui", "FFT", "Real-time"],
+      "github": "https://github.com/Konstantysz/precision-guitar-tuner",
+      "image": "/images/project-precision-tuner.gif"
+    },
+    {
+      "id": "lib-guitar-dsp",
+      "title": {
+        "en": "lib-guitar-dsp - Guitar Audio DSP Library",
+        "pl": "lib-guitar-dsp - Biblioteka DSP dla audio gitary"
+      },
+      "description": {
+        "en": "Modern C++20 digital signal processing library for guitar audio analysis. Provides FFT-based pitch detection, frequency analysis, and audio processing utilities. Core dependency for precision-guitar-tuner.",
+        "pl": "Nowoczesna biblioteka C++20 do przetwarzania sygnałów cyfrowych dla analizy dźwięku gitary. Dostarcza detekcję wysokości dźwięku opartą na FFT, analizę częstotliwości i narzędzia do przetwarzania audio. Główna zależność dla precision-guitar-tuner."
+      },
+      "tags": ["C++20", "DSP", "FFT", "Audio Processing", "Library"],
+      "github": "https://github.com/Konstantysz/lib-guitar-dsp"
+    },
+    {
+      "id": "lib-guitar-io",
+      "title": {
+        "en": "lib-guitar-io - Cross-platform Audio I/O Library",
+        "pl": "lib-guitar-io - Wieloplatformowa biblioteka audio I/O"
+      },
+      "description": {
+        "en": "Cross-platform C++20 audio input/output library for real-time audio capture and playback. Provides unified interface for audio device management across different operating systems. Core dependency for precision-guitar-tuner.",
+        "pl": "Wieloplatformowa biblioteka C++20 do wejścia/wyjścia audio dla przechwytywania i odtwarzania dźwięku w czasie rzeczywistym. Dostarcza zunifikowany interfejs do zarządzania urządzeniami audio na różnych systemach operacyjnych. Główna zależność dla precision-guitar-tuner."
+      },
+      "tags": ["C++20", "Audio I/O", "Cross-platform", "Real-time", "Library"],
+      "github": "https://github.com/Konstantysz/lib-guitar-io"
+    },
+    {
       "id": "vision-craft",
       "title": {
         "en": "VisionCraft - Visual Node Editor for CV",
@@ -12,7 +52,7 @@
       },
       "tags": ["C++20", "OpenCV", "ImGui", "GLFW", "Node Editor"],
       "github": "https://github.com/Konstantysz/vision-craft",
-      "image": "/images/project-1.png"
+      "image": "/images/vision-craft.png"
     },
     {
       "id": "kappa-core",
