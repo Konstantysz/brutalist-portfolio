@@ -35,10 +35,72 @@ import "../../styles/global.css";
         <div class="contact-info">
           <div class="contact-item">
             <span class="label">Email:</span>
-            <a href="mailto:kostekszumigaj@gmail.com"
-              >kostekszumigaj@gmail.com</a
+            <a 
+              href="#" 
+              id="email-link" 
+              data-u="amFnaW11enNrZXRzb2s=" 
+              data-d="bW9jLmxpYW1nQA=="
+              style="cursor: pointer; position: relative;"
+              title="Kliknij, aby odkryć email"
             >
+              <span id="email-text" style="user-select: none;">
+                [Kliknij, aby odkryć email]
+              </span>
+            </a>
           </div>
+          <script>
+            // Multi-layer anti-bot email protection
+            (function() {
+              const emailLink = document.getElementById('email-link');
+              const emailText = document.getElementById('email-text');
+              let revealed = false;
+              
+              emailLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (revealed) return;
+                revealed = true;
+                
+                // Decode multi-layer obfuscation
+                const encodedUser = emailLink.getAttribute('data-u');
+                const encodedDomain = emailLink.getAttribute('data-d');
+                
+                // Step 1: Base64 decode
+                const reversedUser = atob(encodedUser);
+                const reversedDomain = atob(encodedDomain);
+                
+                // Step 2: Reverse strings
+                const user = reversedUser.split('').reverse().join('');
+                const domain = reversedDomain.split('').reverse().join('');
+                
+                // Step 3: Reconstruct email
+                const email = user + domain;
+                
+                // Update UI with animation
+                emailText.style.opacity = '0';
+                setTimeout(() => {
+                  emailLink.href = 'mailto:' + email;
+                  emailText.textContent = email;
+                  emailText.style.userSelect = 'text';
+                  emailText.style.opacity = '1';
+                  emailText.style.transition = 'opacity 0.3s ease';
+                }, 150);
+              });
+              
+              // Add hover effect
+              emailLink.addEventListener('mouseenter', function() {
+                if (!revealed) {
+                  emailText.style.textDecoration = 'underline';
+                }
+              });
+              
+              emailLink.addEventListener('mouseleave', function() {
+                if (!revealed) {
+                  emailText.style.textDecoration = 'none';
+                }
+              });
+            })();
+          </script>
 
           <div class="contact-item">
             <span class="label">GitHub:</span>
