@@ -1,6 +1,32 @@
 {
   "projects": [
     {
+      "id": "sh-3ds",
+      "title": {
+        "en": "sh-3ds - Nintendo 3DS Shiny Hunter Bot",
+        "pl": "sh-3ds - Bot do łowienia shiny na Nintendo 3DS"
+      },
+      "description": {
+        "en": "C++20 computer vision bot for automating shiny Pokémon hunting on Nintendo 3DS. Config-driven YAML pipeline with FSM-based game state tracking, histogram and dominant-color shiny detectors, and UDP input injection through Luma3DS InputRedirection.",
+        "pl": "Bot computer vision w C++20 do automatycznego łowienia shiny Pokémonów na Nintendo 3DS. Konfigurowalny pipeline YAML ze śledzeniem stanu gry opartym na FSM, detektorami shiny opartymi na histogramie i dominującym kolorze oraz iniekcją wejścia UDP przez Luma3DS InputRedirection."
+      },
+      "tags": ["C++20", "Computer Vision", "OpenCV", "CMake", "Automation"],
+      "github": "https://github.com/Konstantysz/sh-3ds"
+    },
+    {
+      "id": "lofi-lab",
+      "title": {
+        "en": "Lo-Fi Lab: Beat Builder [WIP]",
+        "pl": "Lo-Fi Lab: Beat Builder [WIP]"
+      },
+      "description": {
+        "en": "Idle/incremental game built in Godot 4.6.1 (GDScript) set in a lo-fi hip-hop studio. Manage a beat-making operation through DJ automats, upgrades, and prestige mechanics. Features procedural GLSL shaders, layered audio system, and offline progress calculation.",
+        "pl": "Gra idle/incremental w Godot 4.6.1 (GDScript) osadzona w studiu lo-fi hip-hop. Zarządzaj produkcją beatów przez automaty DJ, ulepszenia i mechanikę prestiżu. Zawiera proceduralne shadery GLSL, warstwowy system audio i obliczanie postępu offline."
+      },
+      "tags": ["Godot 4", "GDScript", "Game Dev", "GLSL", "Idle Game"],
+      "github": "https://github.com/Konstantysz/lofi-lab"
+    },
+    {
       "id": "precision-guitar-tuner",
       "title": {
         "en": "Precision Guitar Tuner - Real-time Audio Tuner",
