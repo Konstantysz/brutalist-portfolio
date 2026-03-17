@@ -7,8 +7,8 @@
         "pl": "sh-3ds - Bot do łowienia shiny na Nintendo 3DS"
       },
       "description": {
-        "en": "C++20 computer vision bot for automating shiny Pokémon hunting on Nintendo 3DS. Config-driven YAML pipeline with FSM-based game state tracking, histogram and dominant-color shiny detectors, and UDP input injection through Luma3DS InputRedirection.",
-        "pl": "Bot computer vision w C++20 do automatycznego łowienia shiny Pokémonów na Nintendo 3DS. Konfigurowalny pipeline YAML ze śledzeniem stanu gry opartym na FSM, detektorami shiny opartymi na histogramie i dominującym kolorze oraz iniekcją wejścia UDP przez Luma3DS InputRedirection."
+        "en": "Computer vision bot for shiny Pokémon hunting on real 3DS hardware. Reads the screen via video capture, tracks game state with an FSM, injects button inputs over UDP through Luma3DS. Adding a new game means writing a YAML config, not touching C++.",
+        "pl": "Bot computer vision do łowienia shiny Pokémonów na prawdziwym sprzęcie 3DS. Odczytuje obraz przez przechwytywanie wideo, śledzi stan gry maszyną stanów, wysyła wciśnięcia przycisków przez UDP via Luma3DS. Dodanie nowej gry to plik YAML, nie nowy kod C++."
       },
       "tags": ["C++20", "Computer Vision", "OpenCV", "CMake", "Automation"],
       "github": "https://github.com/Konstantysz/sh-3ds"
@@ -20,8 +20,8 @@
         "pl": "Lo-Fi Lab: Beat Builder [WIP]"
       },
       "description": {
-        "en": "Idle/incremental game built in Godot 4.6.1 (GDScript) set in a lo-fi hip-hop studio. Manage a beat-making operation through DJ automats, upgrades, and prestige mechanics. Features procedural GLSL shaders, layered audio system, and offline progress calculation.",
-        "pl": "Gra idle/incremental w Godot 4.6.1 (GDScript) osadzona w studiu lo-fi hip-hop. Zarządzaj produkcją beatów przez automaty DJ, ulepszenia i mechanikę prestiżu. Zawiera proceduralne shadery GLSL, warstwowy system audio i obliczanie postępu offline."
+        "en": "Idle game set in a lo-fi hip-hop studio. You click beats, buy DJ automats, unlock upgrades, prestige when you're ready. Written in Godot 4 (GDScript), with procedural GLSL shaders for the studio background and layered audio that stays in sync.",
+        "pl": "Gra idle osadzona w studiu lo-fi hip-hop. Klikasz beaty, kupujesz automaty DJ, odblokowujesz ulepszenia, robisz prestiż. Napisana w Godot 4 (GDScript), z proceduralnymi shaderami GLSL dla tła studia i warstwowym audio, które trzyma synchronizację."
       },
       "tags": ["Godot 4", "GDScript", "Game Dev", "GLSL", "Idle Game"],
       "github": "https://github.com/Konstantysz/lofi-lab"
@@ -33,8 +33,8 @@
         "pl": "Precision Guitar Tuner - Stroik gitarowy w czasie rzeczywistym"
       },
       "description": {
-        "en": "High-precision guitar tuner application with real-time audio processing. Features FFT-based pitch detection, multiple tuning modes, and clean ImGui interface. Built with modern C++20 using custom DSP and audio I/O libraries.",
-        "pl": "Aplikacja do precyzyjnego strojenia gitary z przetwarzaniem audio w czasie rzeczywistym. Zawiera detekcję wysokości dźwięku opartą na FFT, wiele trybów strojenia i czysty interfejs ImGui. Zbudowana w nowoczesnym C++20 z użyciem własnych bibliotek DSP i audio I/O."
+        "en": "Guitar tuner with real-time audio processing. FFT-based pitch detection, multiple tuning modes, ImGui interface. C++20, built on top of custom DSP and audio I/O libraries I wrote separately.",
+        "pl": "Stroik gitarowy z przetwarzaniem audio w czasie rzeczywistym. Detekcja wysokości oparta na FFT, wiele trybów strojenia, interfejs ImGui. C++20, zbudowany na własnych bibliotekach DSP i audio I/O pisanych osobno."
       },
       "tags": ["C++20", "Audio DSP", "ImGui", "FFT", "Real-time"],
       "github": "https://github.com/Konstantysz/precision-guitar-tuner",
@@ -47,8 +47,8 @@
         "pl": "lib-guitar-dsp - Biblioteka DSP dla audio gitary"
       },
       "description": {
-        "en": "Modern C++20 digital signal processing library for guitar audio analysis. Provides FFT-based pitch detection, frequency analysis, and audio processing utilities. Core dependency for precision-guitar-tuner.",
-        "pl": "Nowoczesna biblioteka C++20 do przetwarzania sygnałów cyfrowych dla analizy dźwięku gitary. Dostarcza detekcję wysokości dźwięku opartą na FFT, analizę częstotliwości i narzędzia do przetwarzania audio. Główna zależność dla precision-guitar-tuner."
+        "en": "DSP library for guitar audio analysis — FFT pitch detection, frequency analysis, audio processing utilities. Written as a standalone dependency for precision-guitar-tuner.",
+        "pl": "Biblioteka DSP do analizy dźwięku gitary — detekcja wysokości oparta na FFT, analiza częstotliwości, narzędzia audio. Wydzielona jako samodzielna zależność dla precision-guitar-tuner."
       },
       "tags": ["C++20", "DSP", "FFT", "Audio Processing", "Library"],
       "github": "https://github.com/Konstantysz/lib-guitar-dsp"
@@ -60,8 +60,8 @@
         "pl": "lib-guitar-io - Wieloplatformowa biblioteka audio I/O"
       },
       "description": {
-        "en": "Cross-platform C++20 audio input/output library for real-time audio capture and playback. Provides unified interface for audio device management across different operating systems. Core dependency for precision-guitar-tuner.",
-        "pl": "Wieloplatformowa biblioteka C++20 do wejścia/wyjścia audio dla przechwytywania i odtwarzania dźwięku w czasie rzeczywistym. Dostarcza zunifikowany interfejs do zarządzania urządzeniami audio na różnych systemach operacyjnych. Główna zależność dla precision-guitar-tuner."
+        "en": "Cross-platform audio I/O library for real-time capture and playback. Unified interface for audio devices across different OSes. Standalone dependency for precision-guitar-tuner.",
+        "pl": "Wieloplatformowa biblioteka audio I/O do nagrywania i odtwarzania w czasie rzeczywistym. Zunifikowany interfejs dla urządzeń audio na różnych systemach. Samodzielna zależność dla precision-guitar-tuner."
       },
       "tags": ["C++20", "Audio I/O", "Cross-platform", "Real-time", "Library"],
       "github": "https://github.com/Konstantysz/lib-guitar-io"
@@ -73,8 +73,8 @@
         "pl": "VisionCraft - Wizualny edytor węzłów CV"
       },
       "description": {
-        "en": "Modern C++20 computer vision node editor with intuitive visual programming interface. Build complex CV pipelines through drag-and-drop node system with real-time processing.",
-        "pl": "Nowoczesny edytor węzłów computer vision w C++20 z intuicyjnym interfejsem programowania wizualnego. Twórz złożone pipeline'y CV poprzez system drag-and-drop z przetwarzaniem w czasie rzeczywistym."
+        "en": "Node editor for building CV pipelines visually in C++20. Drag nodes, wire them up, watch the output update in real time. Uses ImGui and GLFW.",
+        "pl": "Edytor węzłów do wizualnego budowania potoków CV w C++20. Przeciągaj węzły, łącz je, oglądaj wynik na bieżąco. Używa ImGui i GLFW."
       },
       "tags": ["C++20", "OpenCV", "ImGui", "GLFW", "Node Editor"],
       "github": "https://github.com/Konstantysz/vision-craft",
@@ -87,8 +87,8 @@
         "pl": "Kappa Core - Framework aplikacji OpenGL"
       },
       "description": {
-        "en": "Modern C++20 application framework providing infrastructure for OpenGL applications. Features layer-based architecture, event system, window management, texture handling, and comprehensive logging with CI/CD pipeline.",
-        "pl": "Nowoczesny framework aplikacji w C++20 dostarczający infrastrukturę dla aplikacji OpenGL. Zawiera architekturę warstwową, system eventów, zarządzanie oknem, obsługę tekstur oraz kompleksowe logowanie z pipeline CI/CD."
+        "en": "C++20 framework for OpenGL applications. Layer-based architecture with an event system, window management, texture handling, and logging baked in. Has a CI/CD pipeline.",
+        "pl": "Framework C++20 dla aplikacji OpenGL. Architektura warstwowa z systemem eventów, zarządzaniem oknem, obsługą tekstur i logowaniem w jednym. Z pipeline'em CI/CD."
       },
       "tags": ["C++20", "OpenGL", "GLFW", "CMake", "Framework"],
       "github": "https://github.com/Konstantysz/kappa-core"
@@ -100,8 +100,8 @@
         "pl": "PyShiny Hunter - Łowca shiny Pokemon"
       },
       "description": {
-        "en": "Python-based automation tool for hunting shiny Pokemon in emulated games. Uses computer vision and automation techniques to detect and catch rare shiny variants efficiently.",
-        "pl": "Narzędzie automatyzacji w Pythonie do łowienia shiny Pokemon w emulowanych grach. Wykorzystuje techniki computer vision i automatyzacji do efektywnego wykrywania i łapania rzadkich shiny wariantów."
+        "en": "Automation tool for hunting shiny Pokemon on an emulator. Watches the screen with OpenCV and soft-resets on repeat until a shiny appears.",
+        "pl": "Narzędzie do łowienia shiny Pokemon na emulatorze. Obserwuje ekran przez OpenCV i resetuje grę w kółko, aż pojawi się shiny."
       },
       "tags": ["Python", "Computer Vision", "Automation", "OpenCV"],
       "github": "https://github.com/Konstantysz/pyshiny-hunter",
