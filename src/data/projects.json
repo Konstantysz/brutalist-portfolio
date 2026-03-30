@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "cbt-toolkit-app",
+      "title": {
+        "en": "CBT Toolkit",
+        "pl": "Narzędzia wspierające terapię poznawczo-behawioralną"
+      },
+      "description": {
+        "en": "Mobile app providing Cognitive Behavioral Therapy (CBT) tools. Built with React Native + Expo for Android.",
+        "pl": "Aplikacja mobilna oferująca narzędzia do terapii poznawczo-behawioralnej (CBT). Stworzona przy użyciu React Native i Expo na system Android."
+      },
+      "tags": ["React", "Typescript", "Android"],
+      "github": "https://github.com/Konstantysz/cbt-toolkit-app",
+      "image": "/images/cbt-toolkit-app.jpg"
+    },
+    {
       "id": "sh-3ds",
       "title": {
         "en": "sh-3ds - Nintendo 3DS Shiny Hunter Bot",
